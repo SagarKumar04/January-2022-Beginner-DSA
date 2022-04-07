@@ -60,7 +60,7 @@ class BoxWeight extends Box {
     }
 }
 
-public class InheritanceWithConstructor {
+public class SuperKeywordUseI {
     public static void main(String[] args) {
         /*
         Box invisibleBox = new Box();
