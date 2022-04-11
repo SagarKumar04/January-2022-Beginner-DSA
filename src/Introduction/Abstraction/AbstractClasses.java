@@ -1,23 +1,31 @@
 package Introduction.Abstraction;
 
-abstract class A {
+abstract class E {
     abstract void callMe(); //abstract method
 
     void callMeToo() {
-        System.out.println("In callMeToo() method of class A");
+        System.out.println("In callMeToo() method of class E");
     }
 }
 
-class B extends A {
+abstract class F extends E {
+    void callMeOfF() {
+        System.out.println("In callMeOfF() method of class F");
+    }
+}
+
+class G extends F {
     void callMe() {
-        System.out.println("In callMe() method of class B");
+        System.out.println("In callMe() method of class G");
     }
 }
 
 public class AbstractClasses {
     public static void main(String[] args) {
-        B b = new B();
-        b.callMe();
-        b.callMeToo();
+        G g = new G();
+
+        g.callMe();
+        g.callMeToo();
+        g.callMeOfF();
     }
 }
