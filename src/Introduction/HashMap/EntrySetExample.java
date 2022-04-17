@@ -3,7 +3,7 @@ package Introduction.HashMap;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Example {
+public class EntrySetExample {
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<String, Integer>();
 
@@ -20,9 +20,19 @@ public class Example {
         map.put("key4", 52);
         map.put("key5", 62);
         map.put("key6", 72);
-        map.put("key7", 82);
+        map.put("key7", 92);
         map.put("key8", 92);
 
-        System.out.println(map);
+        System.out.println("Map: " + map);
+
+        Integer searchElement = 92;
+        for(Map.Entry<String, Integer> eachEntry : map.entrySet()) {
+            String key = eachEntry.getKey();
+            Integer value = eachEntry.getValue();
+
+            if(value == searchElement) {
+                System.out.println("Key: " + key);
+            }
+        }
     }
 }
