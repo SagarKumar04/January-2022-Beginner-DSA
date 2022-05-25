@@ -1,7 +1,7 @@
 package Introduction.Abstraction;
 
 abstract class A {
-    abstract void callMe(); //abstract method
+    abstract void callMe(); //abstract method // static method are not abstract bcz we override this method in subclass and static doesnt allow this
 
     void callMeToo() {
         System.out.println("In callMeToo() method of class A");
